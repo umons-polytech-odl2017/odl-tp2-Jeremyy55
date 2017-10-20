@@ -1,14 +1,21 @@
 package exercise1;
 
-public class WorkHourSalaryEmployee {
-	private int hour;
-	private int hourRate;
+public class WorkHourSalaryEmployee extends Employee{
 
-	public WorkHourSalaryEmployee(int hour, int fixedSalary, int hourRate) {
+	private int hourRate;
+	private int hour=0;
+
+	public WorkHourSalaryEmployee(int hour, int hourRate) {
 		this.hour = hour;
 		this.hourRate = hourRate;
 
 	}
+
+
+	public void workOneHour() {
+		hour++;
+	}
+
 	public int computeSalary()
 	{
 		return hour*hourRate;

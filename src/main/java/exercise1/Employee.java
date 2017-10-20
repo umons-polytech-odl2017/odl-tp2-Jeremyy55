@@ -7,6 +7,10 @@ public abstract class Employee {
 		return 0;
 	}
 
+	public Employee(String name) {
+		this.name = name;
+	}
+
 	public void sell() { }
 
 	public void workOneHour() { }

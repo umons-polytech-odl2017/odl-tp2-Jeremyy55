@@ -1,18 +1,24 @@
 package exercise1;
 
-public class BaseSalaryPlusCommissionEmployee {
+public class BaseSalaryPlusCommissionEmployee extends Employee {
 	private int fixedSalary;
 	private int commission;
-	private int ventes;
+	private int ventes=0;
 
-	public BaseSalaryPlusCommissionEmployee(int fixedSalary, int commission, int ventes) {
+	public BaseSalaryPlusCommissionEmployee(int fixedSalary, int commission) {
 		this.fixedSalary = fixedSalary;
 		this.commission = commission;
-		this.ventes = ventes;
+
 	}
 	public int computeSalary()
 	{
 		return fixedSalary+commission*ventes;
 	}
+
+	public void sell() {
+		ventes++;
+	}
+
+	public void workOneHour() { }
 
 }
